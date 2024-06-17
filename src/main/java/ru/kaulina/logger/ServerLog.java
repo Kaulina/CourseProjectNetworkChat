@@ -26,7 +26,7 @@ public class ServerLog {
         return INSTANCE;
     }
 
-    public String log(String level,  String msg) {
+    public void log(String level, String msg) {
         frag.put(level, frag.getOrDefault(level, 0) + 1);
         String s = String.format("[%s %3d]\n%s (%d) : %s\n",
                 dtf.format(LocalDateTime.now()),
@@ -36,7 +36,6 @@ public class ServerLog {
                 msg);
         System.out.println( s );
         writeLog(s);
-        return s;
     }
 
     public void writeLog(String s) {

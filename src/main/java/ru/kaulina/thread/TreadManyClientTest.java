@@ -48,10 +48,8 @@ public class TreadManyClientTest implements Runnable {
             out.println(msg);
 
             Thread.sleep(1000);
-            if (msg.equalsIgnoreCase("exit")) {
-                System.out.println("Client kill connections  TEST");
-                send.interrupt();
-            }
+            System.out.println("Client kill connections  TEST");
+            send.interrupt();
             System.out.println("Closing the connection channel - DONE. TEST");
         } catch (IOException | InterruptedException e) {
             return;

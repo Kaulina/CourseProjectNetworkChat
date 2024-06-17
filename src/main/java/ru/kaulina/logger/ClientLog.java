@@ -27,7 +27,8 @@ public class ClientLog {
         }
         return INSTANCE;
     }
-    public String log(String userName, String msg) {
+
+    public void log(String userName, String msg) {
         frag.put(userName, frag.getOrDefault(userName, 0) + 1);
         String s = String.format("[%s %3d]\n%s (%d): %s\n",
                 dtf.format(LocalDateTime.now()),
@@ -36,7 +37,6 @@ public class ClientLog {
                 frag.get(userName),
                 msg);
         writeLog(s);
-        return s;
     }
 
     public void writeLog(String s) {
