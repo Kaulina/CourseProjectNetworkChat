@@ -72,6 +72,7 @@ public class Client {
                 }
             }
             send.interrupt();
+            socketClient.close();
             System.out.println("Closing the connection channel - DONE.");
         } catch (IOException | InterruptedException e) {
             return;

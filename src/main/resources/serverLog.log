@@ -6,3 +6,8 @@ INFO (1) : Hello! Server is active, Waiting for console commands or user connect
 To shut down the server - write "exit"
 [2024/06/18 00:16:34   2]
 INFO (2) : EXIT
+[2024/07/02 17:46:25   1]
+INFO (1) : Hello! Server is active, Waiting for console commands or user connection.. 
+To shut down the server - write "exit"
+[2024/07/02 17:46:49   2]
+INFO (2) : EXIT
